@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from  quizManager.models import Question
 
 def index(request):
-    return render(request, 'quizManager/index.html')
+    question = Question.objects.first()
+    return render(request, 'quizManager/question.html', {'question': question})
+
+
+
