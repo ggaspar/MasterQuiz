@@ -1,5 +1,17 @@
+{% load static %}
 <html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </head>
     <body>
-        {{ question.question_text }}               
+        <div class="cl-sm-8">
+            <div class='questionText'>{{ question.question_text }}</div>
+            <div class="btn btn-info">{{ question.correct_response }}</div>
+            <div class="btn btn-info">{{ question.option1 }}</div>
+            <div class="btn btn-info">{{ question.option2 }}</div>
+            <div class="btn btn-info">{{ question.option3 }}</div>
+        </div>
     </body>
 </html>
