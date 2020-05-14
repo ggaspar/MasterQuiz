@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, Master Quiz")
+    return render(request, 'quizManager/index.html')
